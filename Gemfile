@@ -32,3 +32,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 3.4.1'
 
 gem 'thin', '~> 1.6.3'
+
+gem 'slim', '~> 3.0.3'
+gem 'slim-rails', '~> 3.0.1'
