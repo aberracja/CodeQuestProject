@@ -35,3 +35,6 @@ gem 'thin', '~> 1.6.3'
 
 gem 'slim', '~> 3.0.3'
 gem 'slim-rails', '~> 3.0.1'
+
+#form object
+gem 'virtus'
