@@ -4,7 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    @signup = Signup.new(params[:user].permit(:first_name, :last_name, :email, :password, company_attributes: [:name]))
+    @signup = Signup.new(params)
 
     if @signup.save
       sign_in @signup.user

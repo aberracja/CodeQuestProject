@@ -7,7 +7,7 @@
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  # validates :last_name, :first_name, presence: true
+  validates :last_name, :first_name, presence: true
 
   
 
