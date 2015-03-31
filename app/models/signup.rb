@@ -1,17 +1,17 @@
 class Signup
-  include Virtus 
+  # include Virtus 
 
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  attr_reader :user, :company
+  attr_reader :user, :first_name, :last_name, :company_name, :email, :password
 
-  attribute :first_name, String
-  attribute :last_name, String
-  attribute :company_name, String
-  attribute :email, String
-  attribute :password, String
+  # attribute :first_name, String
+  # attribute :last_name, String
+  # attribute :company_name, String
+  # attribute :email, String
+  # attribute :password, String
 
   #validates :last_name, :first_name, :company_name, presence: true
 
