@@ -6,8 +6,6 @@ class Signup
 
   attr_reader :user, :company, :first_name, :last_name, :company_name, :email, :password
 
-  #validates :last_name, :first_name, :company_name, presence: true
-
   # Forms are never themselves persisted
   def initialize(params)
     @first_name = params[:user][:first_name]
