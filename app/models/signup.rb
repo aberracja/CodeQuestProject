@@ -1,17 +1,10 @@
 class Signup
-  include Virtus 
 
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  attr_reader :user, :company
-
-  attribute :first_name, String
-  attribute :last_name, String
-  attribute :company_name, String
-  attribute :email, String
-  attribute :password, String
+  attr_reader :user, :company, :first_name, :last_name, :company_name, :email, :password
 
   #validates :last_name, :first_name, :company_name, presence: true
 
@@ -24,10 +17,6 @@ class Signup
     @password = params[:user][:password]
   end
 
-  def validate!
-    errors.add(:first_name, "cannot be nil") if first_name.nil?
-  end
-
   def persisted?
     false
   end
@@ -36,8 +25,6 @@ class Signup
     if valid?
       persist!
       true
-    
-
     else
       false
     end
