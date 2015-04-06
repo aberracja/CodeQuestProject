@@ -6,7 +6,9 @@ nav.navbar.navbar-default
         li: a href="#" Projects
         li: a href="#" Team
         li.dropdown
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account<span class="caret"></span></a>
+          a[href='#' class='dropdown-toggle' data-toggle="dropdown" role="button" aria-expanded="false"] 
+            | Account
+            span.caret
           ul.dropdown-menu role="menu"
             li: a href="#" Settings
             li.divider
@@ -14,9 +16,9 @@ nav.navbar.navbar-default
             li: a href="#" Stream
       ul.nav.navbar-nav.navbar-right
         li.dropdown
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+          a[href='#' class='dropdown-toggle' data-toggle="dropdown" role="button" aria-expanded="false"]
             = current_user.email
-            <span class="caret"></span></a>
+            span.caret
           ul.dropdown-menu role="menu"
             li: a href="#" My Profile
             li: a href="#" Account 1
