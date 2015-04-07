@@ -8,11 +8,16 @@ h2 Sign up
     br/
     = f.text_field :first_name, autofocus: true
   
-
   div.field
     = f.label :last_name 
     br/
-    = f.text_field :last_name 
+    = f.text_field :last_name
+
+  div.field
+    = f.fields_for :company do |company_form|
+      = company_form.label :company_name
+      br/
+      = company_form.text_field :company_name 
   
   div.field
     = f.label :email

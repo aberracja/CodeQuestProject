@@ -17,10 +17,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  # host: localhost
+  # port: 5432
   pool: 5
-  host: localhost
   username: postgres
-  password: postgres
+  password: password
 
 
 development:
@@ -83,5 +84,5 @@ test:
 production:
   <<: *default
   database: BasiaProjectTracking_production
-  username: BasiaProjectTracking
+  username: lukasz
   password: <%= ENV['BASIAPROJECTTRACKING_DATABASE_PASSWORD'] %>
