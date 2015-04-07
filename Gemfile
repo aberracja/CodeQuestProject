@@ -39,3 +39,5 @@ gem 'slim-rails', '~> 3.0.1'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+gem 'carrierwave', '~> 0.10.0'
+
