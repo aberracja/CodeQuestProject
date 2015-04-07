@@ -20,11 +20,9 @@ nav.navbar.navbar-default
             = current_user.email
             span.caret
           ul.dropdown-menu role="menu"
-            li: a href="#"
-              = link_to "My Profile", edit_user_registration_path
+            li = link_to "My Profile", edit_user_registration_path
             li: a href="#" Account 1
             li: a href="#" Account 2
             li.divider
-            li: a href="#"
-                = link_to "Logout", destroy_user_session_path, method: :delete
+            li = link_to "Logout", destroy_user_session_path, method: :delete
               
