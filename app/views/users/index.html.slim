@@ -1,0 +1,29 @@
+
+<!-- bootstrap panel -->
+div.panel.panel-default
+  <!-- Default panel contents -->
+  div.panel-heading
+  	h4
+  		| My team
+  <!-- Table -->
+  table.table
+  	tr
+    	th
+    		| name
+    	th
+    		| email
+    	th
+    		| company
+    
+    - User.includes(:company).where( companies: { name: current_user.company.name }).where.not(id: current_user.id).each do |u|
+    	tr
+	    	td
+	    		= u.first_name
+	    	td
+	    		= u.email
+	    	td
+	    		= u.company.name
+
+
+    
+
