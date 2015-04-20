@@ -15,15 +15,15 @@ div.panel.panel-default
     	th
     		| company
     
-    - User.includes(:company).where( companies: { name: current_user.company.name }).where.not(id: current_user.id).each do |u|
-      - if u.blank?
+    - @team.each do |t|
+      - if t.blank?
         | Invite friends
       - else
         tr
           td
-            = u.first_name
+            = t.first_name
           td
-            = u.email
+            = t.email
           td
-            = u.company.name
+            = t.company.name
 

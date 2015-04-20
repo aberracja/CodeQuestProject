@@ -1,4 +1,5 @@
  class User < ActiveRecord::Base
+
   
   belongs_to :company
 
@@ -9,8 +10,10 @@
 
   validates :last_name, :first_name, presence: true
 
-
-
-  
+  scope :my_team, lambda { |user| 
+  	joins(:company).
+  	where( "companies.name = ?", user.company.name).
+  	where.not(id: user.id) 
+  }
 
 end
