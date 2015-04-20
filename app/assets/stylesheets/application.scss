@@ -1,9 +1,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "users.scss"
 
-/* user index table */
-div.panel.panel-default {
-	display: table;
-}
+
 
