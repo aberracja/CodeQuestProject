@@ -1,6 +1,5 @@
  class User < ActiveRecord::Base
-
-  
+ 
   belongs_to :company
 
   mount_uploader :avatar, AvatarUploader
