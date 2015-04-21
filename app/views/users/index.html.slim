@@ -6,26 +6,26 @@ div.panel.panel-default
   	h4
   		| My team
   <!-- Table -->
-  table.table
-  	tr
-    	th
-    		| name
-    	th
-    		| email
-    	th
-    		| company
-    
-    - @team.each do |t|
-      - if t.blank?
+  - if @team.blank?
         | Invite friends
-      - else
-        tr
-          td
-            = t.first_name
-          td
-            = t.email
-          td
-            = t.company.name
+  -else
+    table.table
+    	tr
+      	th
+      		| name
+      	th
+      		| email
+      	th
+      		| company
+      
+        - @team.each do |t|
+          tr
+            td
+              = t.first_name
+            td
+              = t.email
+            td
+              = t.company.name
 
 
 <!-- = render 'invitations/form' --> 
