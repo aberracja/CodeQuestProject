@@ -1,5 +1,8 @@
 nav.navbar.navbar-default
   div.container-fluid
+    div.navbar-header
+      div.navbar-brand
+        = link_to (image_tag("gingi.png", alt: "logo", class: "brand")), root_url
     div.collapse.navbar-collapse#bs-example-navbar-collapse-1
       ul.nav.navbar-nav
         li: a href="#" Timer

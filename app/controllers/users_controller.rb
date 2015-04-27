@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
 	def index
-		@users = User.all
 		@team = User.my_team(current_user)
+		@invitation = Invitation.new
 	end
 
 end
