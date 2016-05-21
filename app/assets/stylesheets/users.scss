@@ -1,0 +1,39 @@
+
+/* user index table */
+div.panel.panel-default {
+	display: table;
+}
+
+.panel-default > .panel-heading {
+	background-color: #819bd2;
+	color: white;
+	border-bottom: 1px solid #627AAD;
+}
+
+div.panel {
+	margin: 5px;
+	width:	400px;
+}
+
+/* invitation form */
+
+.text-label {
+	margin: 0 5px 0 5px;
+	display: block;
+	height: 20px;
+}
+
+.text-field {
+  margin-left: 10px;
+  margin: 5px;
+  width:	320px;
+  height:	35px;
+}
+
+.button {
+	width: 75px;
+	height: 35px;
+	background-color: #819bd2;
+	color: white;
+}
+

@@ -17,9 +17,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  host: localhost
+  port: 5432
   pool: 5
+  username: postgres
+  password: postgres
+
 
 development:
   <<: *default
@@ -81,5 +84,5 @@ test:
 production:
   <<: *default
   database: BasiaProjectTracking_production
-  username: BasiaProjectTracking
+  username: lukasz
   password: <%= ENV['BASIAPROJECTTRACKING_DATABASE_PASSWORD'] %>
