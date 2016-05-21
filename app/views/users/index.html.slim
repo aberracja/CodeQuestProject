@@ -1,0 +1,33 @@
+= render 'invitations/form' 
+
+<!-- bootstrap panel -->
+div.panel.panel-default
+  <!-- Default panel contents -->
+  div.panel-heading
+  	h4
+  		| My team
+  <!-- Table -->
+  - if @team.blank?
+        | Invite friends
+  -else
+    table.table
+    	tr
+      	th
+      		| name
+      	th
+      		| email
+      	th
+      		| company
+      
+        - @team.each do |t|
+          tr
+            td
+              = t.first_name
+            td
+              = t.email
+            td
+              = t.company.name
+
+
+
+
